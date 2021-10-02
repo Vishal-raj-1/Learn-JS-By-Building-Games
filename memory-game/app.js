@@ -74,15 +74,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Check for matches
   function checkForMatch() {
-    let cards = document.querySelectorAll('img');
+    let cards = document.querySelectorAll('.grid div');
+    console.log(cards);
     const optionOneId = cardsChosenId[0];
     const optionTwoId = cardsChosenId[1];
     if (optionOneId !== optionTwoId && cardArray[optionOneId].name === cardArray[optionTwoId].name) {
+      cards[optionOneId].removeEventListener("click", flipCard); 
+      cards[optionTwoId].removeEventListener("click", flipCard);
       cardsWonId.push(cardsChosenId);
     }
     else {
-      cards[optionOneId].setAttribute('src', 'img/js-badge.svg');
-      cards[optionTwoId].setAttribute('src', 'img/js-badge.svg');
+      cards[optionOneId].querySelector('img').setAttribute('src', 'img/js-badge.svg');
+      cards[optionTwoId].querySelector('img').setAttribute('src', 'img/js-badge.svg');
     }
     cardsChosenId = [];
 
@@ -116,6 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cardsWonId = [];
     let cards = document.querySelectorAll('.grid div');
     for(let i=0; i<cards.length; i++){
+      cards[i].addEventListener('click', flipCard);
       cards[i].querySelector('img').setAttribute('src', 'img/js-badge.svg');
     }
 
