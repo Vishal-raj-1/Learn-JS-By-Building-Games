@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Yaldevi&display=swap');
+
+*{
+	padding:0; 
+	margin:0;
+	box-sizing: border-box;
+	font-family: 'Yaldevi', 'sans-serif';
+}
+
+body{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width:100vw;
+	height:100vh;
+	background-color: rgb(99 40 187);
+}
+
+.main{
+	width: 22rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+	justify-content: flex-end;
+    align-content: center;
+    text-align: center;
+}
+
+.main h1{
+	font-size: 4.2rem;
+    text-shadow: 6px 4px 6px rgb(131 7 131);
+    font-family: 'Ephesis', 'cursive';
+}
+
+.main h2{
+	display: inline-block;
+    width: 10rem;
+    padding: 12px 5px;
+    margin: 6px;
+    background-color: #f7b4f7d6;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 1px #dd6fdd;
+    cursor: pointer;
+}
+
+#start, #pause{
+	font-size: 1rem;
+    width: 9rem;
+    font-family: none;
+    font-weight: 800;
+    padding: 10px;
+    margin: 30px 10px;
+    color: #ffffff;
+    background-color: #5c32baf5;
+    border: 1px solid rgb(152 126 245);
+    border-radius: 31px;
+    box-shadow: 2px 2px 5px 1px #e692e6;
+    cursor: pointer;
+}
+
+#pause{
+	display:none;
+}
+
+.grid {
+	width: 45rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+	align-content: flex-start;
+}
+
+.square {
+	width:100px;
+	height: 100px;
+    margin: 10px;
+    border:2px solid #a45ed2;
+    border-radius: 20px;
+    box-shadow:1px 1px 5px 1px #9d62f4;
+	cursor: pointer;
+}
+
+.square:hover{
+	transform:scale(.97);
+	box-shadow:2px 2px 8px 2px #9d62f4;;
+}
+.mole {
+	background: url('mole.png');
+	background-size: cover;
+}
+
+@media screen and (min-width:610px) {
+	.square{
+		height: 180px;
+    	width: 200px;
+	}
+}
+@media screen and (min-width:1100px) {
+	.main{
+		justify-content: center;
+	}
+
+	.grid{
+		align-content: center;
+	}
+}
