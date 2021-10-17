@@ -4,6 +4,7 @@ const timeLeft = document.querySelector('#time-left');
 const start = document.querySelector('#start');
 const pause = document.querySelector('#pause');
 const grid = document.querySelector('.grid');
+const main = document.querySelector('.main');
 let score = document.querySelector('#score');
 let gameMusic = new Audio('./music/gameMusic.mp3');
 let hitMusic = new Audio('./music/hitMusic.mp3');
@@ -50,6 +51,7 @@ function countDown(){
 
 //Centralise the score
 function showScore(){
+  main.style.justifyContent = 'center';
   grid.style.display = 'none';
   timeLeft.style.display = 'none';
   pause.style.display = 'none';
