@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Yaldevi&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background:black;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+
+.main h1{
+    font-size: 5rem;
+    text-shadow: 3px 3px 4px #0058ff;
+    font-family: 'Ephesis', 'cursive';
+}
+
+.start{
+    padding: 12px;
+    font-size: 20px;
+	font-family: 'Yaldevi', 'sans-serif';
+    margin: 1rem;
+    background: black;
+    color: white;
+    box-shadow: 0 0 3px 1px white;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.score, .highScore{
+    font-size: 26px;
+    margin: 9px;
+    font-family: 'Yaldevi', 'sans-serif';
+}
+
+.grid{
+    display: grid;
+    min-height: 50vh;
+    margin: 2rem;
+    width: 50rem;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+    background: #161515;
+    box-shadow: 1px 1px 3px 1px #b1b0b0;
+}
+
+.snake{
+    background: #acffa7;
+    border: 2px solid #707070;
+    border-radius: 4px;
+}
+
+.apple{
+    background: #80d7ff;
+    border: 2px solid #707070;
+    border-radius: 4px;
+}
+
+.head{
+    background: #4dff6b;
+    transform: scale(1.02);
+}
